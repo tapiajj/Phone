@@ -12,5 +12,5 @@ class PhonesController < ApplicationController
       Phone.create(params[:pnumber])
       redirect_to :back
     end
-  
+ 
 end
