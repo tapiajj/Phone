@@ -1,6 +1,6 @@
 class PhonesController < ApplicationController
     def index
-      @pnumbers=Number.all
+      @pnumbers=Phone.all
       respond to do |format|
         format.html
         format.xml { render :xml => @pnumbers}
@@ -9,7 +9,7 @@ class PhonesController < ApplicationController
     end
     
     def create
-      Number.create(params[:pnumber])
+      Phone.create(params[:pnumber])
       redirect_to :back
     end
   
