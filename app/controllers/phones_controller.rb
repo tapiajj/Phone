@@ -1,14 +1,16 @@
-class PhoneController < ApplicationController
-  def index
-    @number=Number.all
-    respond to do |format|
-      format.html
-      format.xml { render :xml => @number}
-      format.json { render :json => @number}
+class PhonesController < ApplicationController
+    def index
+      @pnumbers=Number.all
+      respond to do |format|
+        format.html
+        format.xml { render :xml => @pnumbers}
+        format.json { render :json => @pnumbers}
+      end
     end
-    def new
-      @number=Number.create(params[:pnumber])
+    
+    def create
+      Number.create(params[:pnumber])
       redirect_to :back
     end
-  end
+  
 end
