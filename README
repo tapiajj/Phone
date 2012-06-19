@@ -1,0 +1,22 @@
+== Welcome to Rails
+
+- Hagan un rails app que tenga un Model llamado "Telephone", un controller (telephone_controller.rb) 
+y al menos 2 views (new.html.erb, index.html.erb). Cuando abres el app te presenta 1 text field para poner un 
+número de telefono y un botón para enviar el número a la DB. Después de añadir un número te lleva a una página
+ donde sale el número nuevo + los otros que están en la base de datos. El modelo debe validar que lo que pongas 
+ sea un número válido antes de escribirlo en la base de de datos ejemplos: 111-222-3333, 1112223333, 111 222 3333, 11 12 22 3  3 3 3, +321112223333 (el área code es opcional). El app también debe ser capaz de devolver una representación en json y xml de la lista de números en la base de datos (railsforzombies.org te enseña a hacer eso). Usen sqlite para la base de datos. Tienen que subir su proyecto a github y tienen que hacer diferentes 'commits' mientras van añadiendo cosas nuevas. 
+
+Bonus points (oportunidades para aprender más): [OPCIONAL]
+- Usen javascript (ajax) para añadir teléfonos a la lista dinamicamente en ves de cargar una página completa 
+- Hagan un User model que tenga alguna relación con el Telephone model. 
+- Añadan otro atributo a Telephone (via un 'migration'), ie. "location".
+- Permitan al usuario editar y/o borrar números de teléfono. 
+- Usen twitter bootstrap para el layout (ya que vamos a usar eso anyway para el proyecto)
+- Omitan atributos cuando devuelvan el json (ie. no envíen "modified_date" o algún otro). 
+- Hagan una aplicación sencilla utilizando JQuery Mobile que enseñe la lista de telefonos de su Rails app, para eso:
+http://jquerymobile.com/demos/1.1.0/docs/about/getting-started.html
+http://jquerymobile.com/demos/1.1.0/docs/lists/lists-search-inset.html
+- Conviertan el JQuery Mobile app en un app de Android o iOS:
+iOS: http://docs.phonegap.com/en/1.8.0/guide_getting-started_ios_index.md.html#Getting%20Started%20with%20iOS
+Android: http://docs.phonegap.com/en/1.8.0/guide_getting-started_android_index.md.html#Getting%20Started%20with%20Android
+- Hagan que el app te diga latitud y longitud: http://docs.phonegap.com/en/1.8.0/cordova_geolocation_geolocation.md.html#Geolocation
