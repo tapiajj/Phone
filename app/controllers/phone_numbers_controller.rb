@@ -7,6 +7,7 @@ class PhoneNumbersController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @phone_numbers }
+      format.xml { render xml: @phone_numbers }
     end
   end
 
@@ -18,6 +19,7 @@ class PhoneNumbersController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @phone_number }
+      format.xml { render xml: @phone_numbers }
     end
   end
 
@@ -29,6 +31,7 @@ class PhoneNumbersController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @phone_number }
+      format.xml { render xml: @phone_numbers }
     end
   end
 
@@ -46,9 +49,11 @@ class PhoneNumbersController < ApplicationController
       if @phone_number.save
         format.html { redirect_to @phone_number, notice: 'Phone number was successfully created.' }
         format.json { render json: @phone_number, status: :created, location: @phone_number }
+        format.xml { render xml: @phone_numbers, status: :created, location: @phone_number }
       else
         format.html { render action: "new" }
         format.json { render json: @phone_number.errors, status: :unprocessable_entity }
+        format.xml { render xml: @phone_number.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -62,10 +67,12 @@ class PhoneNumbersController < ApplicationController
       if @phone_number.update_attributes(params[:phone_number])
         format.html { redirect_to @phone_number, notice: 'Phone number was successfully updated.' }
         format.json { head :ok }
+        format.xml { head :ok }
       else
         format.html { render action: "edit" }
         format.json { render json: @phone_number.errors, status: :unprocessable_entity }
-      end
+        format.xml { render xml: @phone_number.errors, status: :unprocessable_entity }
+        end
     end
   end
 
@@ -78,6 +85,7 @@ class PhoneNumbersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to phone_numbers_url }
       format.json { head :ok }
+      format.xml { head :ok }
     end
   end
 end
