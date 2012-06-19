@@ -1,3 +1,5 @@
+== Welcome to Rails
+
 - Hagan un rails app que tenga un Model llamado "Telephone", un controller (telephone_controller.rb) 
 y al menos 2 views (new.html.erb, index.html.erb). Cuando abres el app te presenta 1 text field para poner un 
 número de telefono y un botón para enviar el número a la DB. Después de añadir un número te lleva a una página
@@ -18,4 +20,3 @@ http://jquerymobile.com/demos/1.1.0/docs/lists/lists-search-inset.html
 iOS: http://docs.phonegap.com/en/1.8.0/guide_getting-started_ios_index.md.html#Getting%20Started%20with%20iOS
 Android: http://docs.phonegap.com/en/1.8.0/guide_getting-started_android_index.md.html#Getting%20Started%20with%20Android
 - Hagan que el app te diga latitud y longitud: http://docs.phonegap.com/en/1.8.0/cordova_geolocation_geolocation.md.html#Geolocation
-
